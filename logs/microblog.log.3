@@ -1,0 +1,106 @@
+2021-02-12 21:14:08,971 ERROR: Exception on /login [GET] [in c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\yacho\PycharmProjects\flaskProject\app\routes.py", line 60, in login
+    return render_template('login.html', title='Sign In', form=form)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yacho\PycharmProjects\flaskProject\app\templates\login.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\yacho\PycharmProjects\flaskProject\app\templates\base.html", line 31, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\yacho\PycharmProjects\flaskProject\app\templates\login.html", line 24, in block "content"
+    <a href="{{ url_for(reset_password_request) }}">Click to reset.</a></p>
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\helpers.py", line 318, in url_for
+    if endpoint[:1] == ".":
+jinja2.exceptions.UndefinedError: 'reset_password_request' is undefined
+2021-02-12 21:15:28,050 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:16:01,823 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:18:00,054 ERROR: Exception on /index [GET] [in c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1277, in _execute_context
+    self.dialect.do_execute(
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\engine\default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: post.title
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\yacho\PycharmProjects\flaskProject\app\routes.py", line 30, in index
+    posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 496, in paginate
+    items = self.limit(per_page).offset((page - 1) * per_page).all()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3341, in all
+    return list(self)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3503, in __iter__
+    return self._execute_and_instances(context)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\orm\query.py", line 3528, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1014, in execute
+    return meth(self, multiparams, params)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1127, in _execute_clauseelement
+    ret = self._execute_context(
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1317, in _execute_context
+    self._handle_dbapi_exception(
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1511, in _handle_dbapi_exception
+    util.raise_(
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1277, in _execute_context
+    self.dialect.do_execute(
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\sqlalchemy\engine\default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.title
+[SQL: SELECT anon_1.post_id AS anon_1_post_id, anon_1.post_title AS anon_1_post_title, anon_1.post_body AS anon_1_post_body, anon_1.post_timestamp AS anon_1_post_timestamp, anon_1.post_user_id AS anon_1_post_user_id 
+FROM (SELECT post.id AS post_id, post.title AS post_title, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post JOIN followers ON followers.followed_id = post.user_id 
+WHERE followers.follower_id = ? UNION SELECT post.id AS post_id, post.title AS post_title, post.body AS post_body, post.timestamp AS post_timestamp, post.user_id AS post_user_id 
+FROM post 
+WHERE post.user_id = ?) AS anon_1 ORDER BY anon_1.post_timestamp DESC
+ LIMIT ? OFFSET ?]
+[parameters: (5, 5, 25, 0)]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2021-02-12 21:21:22,178 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:21:54,156 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:22:04,096 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:23:41,304 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:27:08,114 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:28:52,212 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:34:05,544 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-12 21:35:43,933 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]

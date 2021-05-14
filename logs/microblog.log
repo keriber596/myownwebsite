@@ -1,0 +1,64 @@
+2021-02-16 21:55:25,482 ERROR: Exception on /favicon.ico [GET] [in c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1926, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1908, in raise_routing_exception
+    raise request.routing_exception
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\werkzeug\routing.py", line 1945, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1816, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\app.py", line 1744, in handle_http_exception
+    return handler(e)
+  File "C:\Users\yacho\PycharmProjects\flaskProject\app\errors.py", line 7, in not_found_error
+    return render_template('404.html'), 404
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\templating.py", line 137, in render_template
+    return _render(
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\jinja2\environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\yacho\PycharmProjects\flaskProject\app\templates\404.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\yacho\PycharmProjects\flaskProject\app\templates\base.html", line 52, in top-level template code
+    {% if user.is_anonimous %}
+  File "c:\users\yacho\pycharmprojects\flaskproject\venv\lib\site-packages\jinja2\environment.py", line 471, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2021-02-16 21:57:38,471 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-16 22:02:18,446 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-16 22:04:11,363 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-16 22:05:36,938 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-16 22:37:03,059 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-16 22:42:26,949 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-16 22:45:01,798 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-16 22:46:32,857 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-16 22:47:44,479 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-17 23:26:24,197 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-17 23:28:02,327 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-17 23:30:05,855 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-17 23:31:35,298 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-18 20:51:40,701 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-18 20:59:35,504 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-18 21:42:50,332 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-18 21:48:55,295 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-18 21:50:13,094 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-18 21:52:49,725 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]
+2021-02-18 23:09:42,904 INFO: Microblog startup [in C:\Users\yacho\PycharmProjects\flaskProject\app\__init__.py:46]

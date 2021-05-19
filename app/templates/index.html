@@ -22,8 +22,8 @@
         <p>{{ form.submit() }}</p>
     </form>
     {% endif %}
-    <div style="display:grid;">{% for post in posts %}
-<div style="position:absolute; left:10%;>{% include "_post.html" %}</div>
+    <div style="display:grid; position:absolute; top:500px; left:10%;">{% for post in posts %}
+        {% include "_post.html" %}
     {% endfor %}
     {% if prev_url %}
     <a href="{{ prev_url }}">Newer posts</a>
@@ -31,7 +31,7 @@
     {% if next_url %}
     <a href="{{ next_url }}">Older posts</a>
     {% endif %}
-
+</div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="bootstrap.bundle.min.js"></script>
 {% endblock %}

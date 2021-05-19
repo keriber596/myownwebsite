@@ -1,11 +1,11 @@
 <div style="position:relative; top:30px; padding-bottom:30px;">
-    <tr valign="top">
-        <td><img src="{{ post.author.avatar(36) }}"></td>
-        <td>
+    <div valign="top">
+        <div><img src="{{ post.author.avatar(36) }}" style="padding-right:15px;">
             <a href="{{ url_for('user', username=post.author.username) }}">
                 {{ post.author.username }}
             </a>
-            says:<br>{{ post.title }}
-        </td>
-    </tr>
+            {{post.timestamp.date()}}
+        </div>
+            <div><a href="{{ url_for('post', id=post.id) }}" style="font-size:20px; margin-top:20px; margin-left:55px;">{{ post.title }}</a></div>
+    </div>
 </div>

@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-    <table>
-        <tr valign="top">
-            <td><img src="{{ post.author.avatar(36) }}"></td>
-            <td><a href="{{ url_for('user', username=post.author.username) }}">{{ post.author.username }}</a><br>
-                {{ post.timestamp }}<br>
-                {{ post.title }}<br>
-                {{ post.body }}</td>
-        </tr>
-    </table>
+    <div style="position:absolute; top:120px; left:10%;wight:50%;">
+        <img src="{{ post.author.avatar(48) }}">
+                <div style="position:absolute; top:0px; left:55px;"><a href="{{ url_for('user', username=post.author.username) }}" style="font-size:15px;">
+                    {{ post.author.username }}</a><br>
+                {{ post.timestamp.date()}}</div>
+            <div style="font-size:30px;color:rgb(45, 45,45); padding-top:20px; padding-bottom:20px;">{{ post.title }}</div>
+            <div style="width:70%;">{{ post.body }}</div>
+    </div>
 {% endblock %}
